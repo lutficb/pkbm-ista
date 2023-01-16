@@ -10,30 +10,27 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="theme/assets/img/favicon-pkbm.png" rel="icon">
-    <link href="theme/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="<?= base_url(); ?>/theme/assets/img/favicon-pkbm.png" rel="icon">
+    <link href="<?= base_url(); ?>/theme/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="theme/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-    <link href="theme/assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="theme/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="theme/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="theme/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="theme/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="theme/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/theme/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/theme/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/theme/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/theme/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/theme/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/theme/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/theme/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.31/dist/fancybox.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="theme/assets/css/style.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/theme/assets/css/style.css" rel="stylesheet">
 
-    <!-- =======================================================
-  * Template Name: Mentor - v4.3.0
-  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <!-- Custom style -->
+    <link href="<?= base_url(); ?>/assets/css/mystyle.css" rel="stylesheet">
 </head>
 
 <body>
@@ -42,8 +39,6 @@
         <div class="container d-flex align-items-center">
 
             <h1 class="logo me-auto"><a href="<?= base_url('home'); ?>">PKBM IMAM SYAFI'I</a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html" class="logo me-auto"><img src="theme/assets/img/favicon-pkbm.png" alt="" class="img-fluid"></a> -->
 
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul class="navbar-menu">
@@ -63,6 +58,7 @@
                         </ul>
                     </li>
                     <li><a href="<?= base_url('tutor-dan-staff'); ?>">Tutor & Staff</a></li>
+                    <li><a href="<?= base_url('kegiatan-siswa'); ?>">Kegiatan Siswa</a></li>
                     <li><a href="<?= base_url('berita-lembaga'); ?>">Berita</a></li>
                     <li><a href="<?= base_url('penerimaan-peserta-didik-baru'); ?>">PPDB</a></li>
                     <li><a href="<?= base_url('kontak-kami'); ?>">Kontak</a></li>
@@ -91,7 +87,7 @@
                             <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('tentang-lembaga'); ?>">Tentang Kami</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('legalitas-lembaga'); ?>">Legalitas</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('sarana-prasarana'); ?>">Sarpras</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('login'); ?>">Login</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('dashboard'); ?>">Login</a></li>
                         </ul>
                     </div>
 
@@ -130,18 +126,19 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
-    <script src="theme/assets/vendor/aos/aos.js"></script>
-    <script src="theme/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="theme/assets/vendor/php-email-form/validate.js"></script>
-    <script src="theme/assets/vendor/purecounter/purecounter.js"></script>
-    <script src="theme/assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="admin-theme/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="<?= base_url(); ?>/theme/assets/vendor/aos/aos.js"></script>
+    <script src="<?= base_url(); ?>/theme/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url(); ?>/theme/assets/vendor/php-email-form/validate.js"></script>
+    <script src="<?= base_url(); ?>/theme/assets/vendor/purecounter/purecounter.js"></script>
+    <script src="<?= base_url(); ?>/theme/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="<?= base_url(); ?>/admin-theme/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.31/dist/fancybox.umd.min.js"></script>
 
     <!-- Template Main JS File -->
-    <script src="theme/assets/js/main.js"></script>
+    <script src="<?= base_url(); ?>/theme/assets/js/main.js"></script>
 
     <!-- My Custom Script -->
-    <script src="assets/js/myscript.js"></script>
+    <script src="<?= base_url(); ?>/assets/js/myscript.js"></script>
 
 </body>
 

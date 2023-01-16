@@ -19,6 +19,14 @@ class Filters extends BaseConfig
         'csrf'     => CSRF::class,
         'toolbar'  => DebugToolbar::class,
         'honeypot' => Honeypot::class,
+
+        // Codeigniter Shield
+        'session'    => \CodeIgniter\Shield\Filters\SessionAuth::class,
+        'tokens'     => \CodeIgniter\Shield\Filters\TokenAuth::class,
+        'chain'      => \CodeIgniter\Shield\Filters\ChainAuth::class,
+        'auth-rates' => \CodeIgniter\Shield\Filters\AuthRates::class,
+        'group'      => \CodeIgniter\Shield\Filters\GroupFilter::class,
+        'permission' => \CodeIgniter\Shield\Filters\PermissionFilter::class,
     ];
 
     /**
@@ -30,7 +38,7 @@ class Filters extends BaseConfig
     public $globals = [
         'before' => [
             // 'honeypot',
-            'csrf',
+            'csrf' => ['except' => ['home/uploadImgArticle', 'home/deleteImgArticle']],
         ],
         'after' => [
             'toolbar',
@@ -58,5 +66,17 @@ class Filters extends BaseConfig
      *
      * @var array
      */
-    public $filters = [];
+    public $filters = [
+        'auth-rates' => [
+            'before' => [
+                'login*', 'register', 'auth/*'
+            ]
+        ],
+
+        'session' => [
+            'before' => [
+                'kategori-blog*', 'dashboard', 'edit-dashboard*', 'pages*', 'edit-pages*', 'posts*', 'kategori-sarpras*', 'sarpras*', 'kategori-kegiatan*', 'kegiatan/*', 'data-siswa-psb', 'detail-peserta*', 'download*', 'users*',
+            ],
+        ],
+    ];
 }

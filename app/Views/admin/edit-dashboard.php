@@ -3,12 +3,15 @@
 <?= $this->section('content'); ?>
 <section class="section">
     <div class="section-header">
-        <h1>Dashboard</h1>
+        <div class="section-header-back">
+            <a href="<?= base_url('dashboard'); ?>" class="btn"><i class="fas fa-arrow-left"></i></a>
+        </div>
+        <h1><?= $subtitle; ?></h1>
     </div>
 
     <div class="section-body">
         <h2 class="section-title"><?= formatHariIndonesia(date('D')) . ', ' . formatTanggalIndo(date('d-m-Y')); ?></h2>
-        <p class="section-lead">Pengaturan konten-konten yang muncul di halaman utama website.</p>
+        <p class="section-lead"><?= $deskripsi; ?></p>
 
         <div class="card">
             <div class="card-header">
@@ -21,49 +24,49 @@
                     <div class="form-group row">
                         <label for="headline1" class="col-sm-2 col-form-label">Headline 1</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="headline1" name="headline1" value="<?= $home->headline1; ?>">
+                            <input type="text" class="form-control" id="headline1" name="headline1" value="<?= $home->headline1; ?>" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="headline2" class="col-sm-2 col-form-label">Headline 2</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="headline2" name="headline2" value="<?= $home->headline2; ?>">
+                            <input type="text" class="form-control" id="headline2" name="headline2" value="<?= $home->headline2; ?>" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="headline3" class="col-sm-2 col-form-label">Headline 3</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="headline3" name="headline3" value="<?= $home->headline3; ?>">
+                            <input type="text" class="form-control" id="headline3" name="headline3" value="<?= $home->headline3; ?>" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="sambutan" class="col-sm-2 col-form-label">Sambutan Kepala PKBM</label>
                         <div class="col-sm-8">
-                            <textarea class="summernote-simple" name="sambutan" id="sambutan"><?= $home->sambutan; ?></textarea>
+                            <textarea class="summernote-simple" name="sambutan" id="sambutan" required><?= $home->sambutan; ?></textarea>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="why_us" class="col-sm-2 col-form-label">Kenapa memilih PKBM Imam Syafi'i</label>
                         <div class="col-sm-8">
-                            <textarea class="summernote-simple" name="why_us" id="why_us"><?= $home->why_us; ?></textarea>
+                            <textarea class="summernote-simple" name="why_us" id="why_us" required><?= $home->why_us; ?></textarea>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="jml_paket_b" class="col-sm-2 col-form-label">Warga Belajar Paket B</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control" id="jml_paket_b" name="jml_paket_b" value="<?= $home->jml_paket_b; ?>">
+                            <input type="number" class="form-control" id="jml_paket_b" name="jml_paket_b" value="<?= $home->jml_paket_b; ?>" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="jml_paket_c" class="col-sm-2 col-form-label">Warga Belajar Paket C</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control" id="jml_paket_c" name="jml_paket_c" value="<?= $home->jml_paket_c; ?>">
+                            <input type="number" class="form-control" id="jml_paket_c" name="jml_paket_c" value="<?= $home->jml_paket_c; ?>" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="tutor" class="col-sm-2 col-form-label">Tutor</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control" id="tutor" name="tutor" value="<?= $home->tutor; ?>">
+                            <input type="number" class="form-control" id="tutor" name="tutor" value="<?= $home->tutor; ?>" required>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -75,13 +78,13 @@
                     <div class="form-group row">
                         <label for="phone" class="col-sm-2 col-form-label">Phone</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control phone-number" name="phone" id="phone" value="<?= $home->phone; ?>">
+                            <input type="text" class="form-control phone-number" name="phone" id="phone" value="<?= $home->phone; ?>" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="email" class="col-sm-2 col-form-label">Email</label>
                         <div class="col-sm-4">
-                            <input type="email" class="form-control" name="email" id="email" value="<?= $home->email; ?>">
+                            <input type="email" class="form-control" name="email" id="email" value="<?= $home->email; ?>" required>
                         </div>
                     </div>
                     <div class="row justify-content-center">

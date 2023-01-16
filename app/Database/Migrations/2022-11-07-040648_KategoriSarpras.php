@@ -15,6 +15,11 @@ class KategoriSarpras extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
+            'slug' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+                'unique' => true,
+            ],
             'nama_kategori' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
@@ -23,7 +28,7 @@ class KategoriSarpras extends Migration
                 'type' => 'TEXT',
                 'null' => true,
             ],
-            'thumbail' => [
+            'thumbnail' => [
                 'type' => 'VARCHAR',
                 'constraint' => '100',
             ],

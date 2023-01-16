@@ -13,26 +13,29 @@
     <section id="berita-terbaru" class="courses">
         <div class="container" data-aos="fade-up">
             <div class="row" data-aos="zoom-in" data-aos-delay="100">
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="course-item">
-                        <img src="assets/img/img-1.png" class="img-fluid" alt="...">
-                        <div class="course-content">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <h4>Kegiatan Santri</h4>
-                                <p class="price"><?= date('d-m-Y'); ?></p>
-                            </div>
 
-                            <h3><a href="course-details.html">Pelatihan Perawatan Jenazah</a></h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta itaque sit molestias quod? Illo, molestiae, animi fugiat est facere distinctio fuga obcaecati eaque eveniet aperiam, aut tenetur impedit dolor maxime.</p>
-                            <div class="trainer d-flex justify-content-between align-items-center">
-                                <div class="trainer-profile d-flex align-items-center">
-                                    <img src="assets/img/user-default.png" class="img-fluid" alt="">
-                                    <span>Admin</span>
+                <?php foreach ($post as $key => $item) : ?>
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
+                        <div class="course-item">
+                            <img src="assets/img/img-post/<?= $item->thumbnail; ?>" class="img-fluid" alt="...">
+                            <div class="course-content">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4><?= $item->kategori; ?></h4>
+                                    <p><?= formatTanggalIndo($item->created_at); ?></p>
+                                </div>
+
+                                <h3><a href="<?= base_url('berita-lembaga/' . $item->slug); ?>"><?= $item->judul; ?></a></h3>
+                                <p><?= ringkasKalimat($item->isi, 20) . '...'; ?></p>
+                                <div class="trainer d-flex justify-content-between align-items-center">
+                                    <div class="trainer-profile d-flex align-items-center">
+                                        <a href="<?= base_url('berita-lembaga/' . $item->slug); ?>" class="btn-get-started">Selengkapnya ></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                <?php endforeach; ?>
+
             </div>
         </div>
     </section>

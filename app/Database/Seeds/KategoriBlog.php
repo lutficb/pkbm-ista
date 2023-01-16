@@ -9,12 +9,14 @@ class KategoriBlog extends Seeder
     public function run()
     {
         $faker = \Faker\Factory::create('id_ID');
+        $kategori = ['Pendidikan', 'Kegiatan Warga Belajar', 'Esktrakulikuler', 'Kurikulum', 'Pembelajaran'];
 
-        for ($i = 1; $i <= 5; $i++) {
+        for ($i = 0; $i <= 4; $i++) {
             $data = [
-                'nama_kategori' => $faker->words(2, true),
+                'slug' => url_title($kategori[$i], '-', true),
+                'nama_kategori' => $kategori[$i],
                 'info_kategori' => $faker->paragraph(),
-                'thumbnail' => $faker->imageUrl(640, 480, null, true),
+                'thumbnail' => 'img-default.jpg',
                 'created_at' => \CodeIgniter\I18n\Time::now(),
             ];
 

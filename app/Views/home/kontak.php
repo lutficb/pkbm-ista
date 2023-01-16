@@ -32,13 +32,13 @@
                         <div class="email">
                             <i class="bi bi-envelope"></i>
                             <h4>Email:</h4>
-                            <p>pkbm.ista@gmail.com</p>
+                            <p><?= $query->email; ?></p>
                         </div>
 
                         <div class="phone">
                             <i class="bi bi-phone"></i>
                             <h4>No. Telpon:</h4>
-                            <p>+62812-1462-6278</p>
+                            <p><?= $query->phone; ?></p>
                         </div>
 
                     </div>

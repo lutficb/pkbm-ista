@@ -5,7 +5,7 @@
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs" data-aos="fade-in">
         <div class="container">
-            <h2>Penerimaan Peserta Didik Baru (PPDB)</h2>
+            <h2><?= $ppdb->judul_halaman; ?></h2>
             <p>PKBM Imam Syafi'i Tulungagung menerima Peserta Didik Baru setiap tahunnya, untuk mendaftar silahkan baca informasi di bawah</p>
         </div>
     </div><!-- End Breadcrumbs -->
@@ -15,8 +15,7 @@
         <div class="container" data-aos="fade-up">
             <div class="row mt-3">
                 <div class="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content">
-                    <h3>Cara dan Syarat Pendaftaran</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi labore voluptatem suscipit, quidem aperiam laudantium impedit, debitis veritatis ut beatae eius laborum vero architecto illo unde repellendus dolorum facilis autem ipsa reprehenderit atque! Dolorum sint temporibus quaerat ut quas doloribus doloremque minus animi asperiores suscipit quis mollitia aliquid ducimus, necessitatibus recusandae molestiae consequatur repudiandae consequuntur laborum, id iure inventore, nisi dolore alias! Odit facilis perferendis, eligendi quae esse repellendus corporis impedit minima vero asperiores dignissimos libero error pariatur obcaecati nesciunt accusantium quod quis, aut officiis nisi sapiente, veniam dolorem vel accusamus! Voluptate aut quibusdam aperiam animi accusamus sapiente commodi possimus quod veritatis asperiores quaerat ad mollitia corrupti doloribus laudantium suscipit itaque a quo, officia molestias? Nemo non neque sunt est velit tenetur possimus vel! Alias sit aperiam culpa ipsa, aliquam unde quo voluptates nemo deleniti! Eos ipsum sapiente aliquid adipisci. Harum eius debitis asperiores, ducimus dolorum enim quod assumenda dolore atque nisi odio fugit libero laudantium voluptatum eveniet minima molestiae veritatis quasi illum provident, repudiandae amet vel aspernatur. Non, totam veritatis quia repellendus suscipit odit numquam illum sapiente libero excepturi ex similique maiores iste a tempore, doloremque eligendi odio unde laudantium? Porro officiis expedita labore neque sint sed ab rerum.</p>
+                    <?= $ppdb->isi_halaman; ?>
                 </div>
             </div>
             <div class="row mt-3">

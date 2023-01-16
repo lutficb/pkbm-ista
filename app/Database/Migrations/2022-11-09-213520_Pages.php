@@ -23,7 +23,7 @@ class Pages extends Migration
                 'type' => 'TEXT',
                 'null' => true,
             ],
-            'thumbail' => [
+            'thumbnail' => [
                 'type' => 'VARCHAR',
                 'constraint' => '100',
             ],

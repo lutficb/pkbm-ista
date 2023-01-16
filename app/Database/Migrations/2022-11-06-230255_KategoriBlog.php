@@ -15,6 +15,11 @@ class KategoriBlog extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
+            'slug' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+                'unique' => true,
+            ],
             'nama_kategori' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',

@@ -1,0 +1,56 @@
+.table-pages > tbody > tr > td {
+    vertical-align: middle;
+}
+
+#table-psb > tbody > tr >  td {
+    vertical-align: middle;
+}
+
+.img-10rem {
+    width: 10rem;
+    /* height: 200px; */
+}
+
+.chevron-left {
+    width: 5vh;
+    height: 5vh;
+    background: url("../../theme/assets/img/pkbm/chevron-prev.svg");
+    background-size: cover;
+}
+
+.chevron-right {
+    width: 5vh;
+    height: 5vh;
+    background: url("../../theme/assets/img/pkbm/chevron-next.svg");
+    background-size: cover;
+}
+
+.cource-details-tabs h4 {
+    font-size: 18px;
+    margin: 30px 0 15px 0;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.cource-details-tabs h4:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #eef0ef;
+    bottom: 0;
+    left: 0;
+}
+
+.cource-details-tabs h4:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: #5fcf80;
+    bottom: 0;
+    left: 0;
+}

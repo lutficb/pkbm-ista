@@ -19,6 +19,10 @@ class Sarpras extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
+            'slug' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+            ],
             'info_gambar' => [
                 'type' => 'VARCHAR',
                 'constraint' => '100',
@@ -27,10 +31,10 @@ class Sarpras extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '100',
             ],
-            'id_kategori_sarpras' => [
-                'type'           => 'INT',
-                'constraint'     => 5,
-                'unsigned'       => true,
+            'kode_kategori' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+                'null'       => true,
             ],
             'created_at' => [
                 'type' => 'DATETIME',
@@ -46,13 +50,13 @@ class Sarpras extends Migration
             ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->addForeignKey('id_kategori_sarpras', 'kategori_sarpras', 'id');
+        $this->forge->addForeignKey('kode_kategori', 'kategori_sarpras', 'slug', 'SET NULL', 'SET NULL');
         $this->forge->createTable('sarpras');
     }
 
     public function down()
     {
-        $this->forge->dropForeignKey('sarpras', 'sarpras_id_kategori_sarpras_foreign');
+        $this->forge->dropForeignKey('sarpras', 'sarpras_kode_kategori_foreign');
         $this->forge->dropTable('sarpras');
     }
 }

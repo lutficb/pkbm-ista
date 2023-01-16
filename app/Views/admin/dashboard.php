@@ -3,12 +3,34 @@
 <?= $this->section('content'); ?>
 <section class="section">
     <div class="section-header">
-        <h1>Dashboard</h1>
+        <h1><?= $subtitle; ?></h1>
     </div>
 
     <div class="section-body">
         <h2 class="section-title"><?= formatHariIndonesia(date('D')) . ', ' . formatTanggalIndo(date('d-m-Y')); ?></h2>
-        <p class="section-lead">Pengaturan konten-konten yang muncul di halaman utama website.</p>
+        <p class="section-lead"><?= $deskripsi; ?></p>
+
+        <?php if (session()->getFlashdata('success')) : ?>
+            <div class="alert alert-success alert-dismissible show fade">
+                <div class="alert-body">
+                    <button class="close" data-dismiss="alert">
+                        <span>&times;</span>
+                    </button>
+                    <?= session()->getFlashdata('success'); ?>
+                </div>
+            </div>
+        <?php endif; ?>
+
+        <?php if (session()->getFlashdata('error')) : ?>
+            <div class="alert alert-danger alert-dismissible show fade">
+                <div class="alert-body">
+                    <button class="close" data-dismiss="alert">
+                        <span>&times;</span>
+                    </button>
+                    <?= session()->getFlashdata('error'); ?>
+                </div>
+            </div>
+        <?php endif; ?>
 
         <div class="card">
             <div class="card-header justify-content-between">

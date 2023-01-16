@@ -19,11 +19,11 @@ class BlogPost extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
-            'konten_post' => [
-                'type' => 'TEXT',
-                'null' => true,
+            'slug' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
             ],
-            'excerpt' => [
+            'konten_post' => [
                 'type' => 'TEXT',
                 'null' => true,
             ],
@@ -36,10 +36,10 @@ class BlogPost extends Migration
                 'constraint' => ['publish', 'draft'],
                 'default'    => 'draft',
             ],
-            'id_kategori' => [
-                'type'           => 'INT',
-                'constraint'     => 5,
-                'unsigned'       => true,
+            'kode_kategori' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+                'null'       => true,
             ],
             'created_at' => [
                 'type' => 'DATETIME',
@@ -55,13 +55,13 @@ class BlogPost extends Migration
             ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->addForeignKey('id_kategori', 'kategori_blog', 'id');
+        $this->forge->addForeignKey('kode_kategori', 'kategori_blog', 'slug', 'SET NULL', 'SET NULL');
         $this->forge->createTable('blog_post');
     }
 
     public function down()
     {
-        $this->forge->dropForeignKey('blog_post', 'blog_post_id_kategori_foreign');
+        $this->forge->dropForeignKey('blog_post', 'blog_post_kode_kategori_foreign');
         $this->forge->dropTable('blog_post');
     }
 }

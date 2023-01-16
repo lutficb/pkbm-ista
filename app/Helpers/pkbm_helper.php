@@ -34,11 +34,19 @@ function formatHariIndonesia($date)
         'Sun' => 'Ahad',
         'Mon' => 'Senin',
         'Tue' => 'Selasa',
-        'Wen' => 'Rabu',
+        'Wed' => 'Rabu',
         'Thu' => 'Kamis',
         'Fri' => "Jum'at",
         'Sat' => 'Sabtu',
     ];
 
     return $hari = $day[$date];
+}
+
+// Fungsi untuk mengambil sebagian kata dari kalimat yang diberikan
+// $kalimat -> string inputan user
+// $num -> jumlah kata yang ingin ditampilkan, ex : $num = 10 (Berarti yang akan ditampilkan adalah 10 kata pertama dari total kata dalam variable $kalimat)
+function ringkasKalimat($kalimat, $num)
+{
+    return implode(' ', array_slice(explode(' ', $kalimat), 0, $num));
 }
