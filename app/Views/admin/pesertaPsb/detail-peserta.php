@@ -86,6 +86,14 @@
                                 </tr>
                                 <tr class="text-center">
                                     <th>4</th>
+                                    <td>NISN</td>
+                                    <td>
+                                        <!-- <a href="" class="btn btn-success btn-sm mr-3"><i class="fas fa-book-reader"></i> Lihat</a> -->
+                                        <a href="<?= base_url('download-nisn/' . $peserta->slug); ?>" target="_blank" class="btn btn-warning btn-sm"><i class="fas fa-download"></i> Unduh</a>
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <th>5</th>
                                     <td>KIP</td>
                                     <td>
                                         <!-- <a href="" class="btn btn-success btn-sm mr-3"><i class="fas fa-book-reader"></i> Lihat</a> -->
@@ -93,7 +101,7 @@
                                     </td>
                                 </tr>
                                 <tr class="text-center">
-                                    <th>5</th>
+                                    <th>6</th>
                                     <td>PKH</td>
                                     <td>
                                         <!-- <a href="" class="btn btn-success btn-sm mr-3"><i class="fas fa-book-reader"></i> Lihat</a> -->

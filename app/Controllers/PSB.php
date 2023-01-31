@@ -7,6 +7,8 @@ use App\Models\PsbModel;
 
 class PSB extends BaseController
 {
+    protected $psb;
+
     function __construct()
     {
         $this->psb = new PsbModel();
@@ -88,5 +90,14 @@ class PSB extends BaseController
 
         // Donwload file yang dimaksud
         return $this->response->download('assets/berkas/pkh/' . $peserta->kartu_pkh, null);
+    }
+
+    public function downloadNisn($slug)
+    {
+        // Ambl data peserta sesuai dngan slug yang dikirim
+        $peserta = $this->psb->where('slug', $slug)->first();
+
+        // Donwload file yang dimaksud
+        return $this->response->download('assets/berkas/nisn/' . $peserta->kartu_nisn, null);
     }
 }

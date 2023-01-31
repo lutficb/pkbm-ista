@@ -104,7 +104,8 @@ $routes->get('download-foto/(:segment)', 'PSB::downloadFoto/$1');
 $routes->get('download-akta/(:segment)', 'PSB::downloadAkta/$1');
 $routes->get('download-kk/(:segment)', 'PSB::downloadKk/$1');
 $routes->get('download-kip/(:segment)', 'PSB::downloadKip/$1');
-$routes->get('download-pkh/(:segment)', 'PSB::downloadPkh/$1');
+$routes->get('download-kip/(:segment)', 'PSB::downloadKip/$1');
+$routes->get('download-nisn/(:segment)', 'PSB::downloadNisn/$1');
 
 $routes->get('users', 'Users::index');
 $routes->get('users/new', 'Users::new');
